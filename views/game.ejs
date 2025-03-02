@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hindi Pronunciation Game</title>
+
+  <link rel="stylesheet" href="../stylesheets/maicons.css">
+  <link rel="stylesheet" href="../stylesheets/bootstrap.css">
+  <link rel="stylesheet" href="../vendor/animate/animate.css">
+  <link rel="stylesheet" href="../stylesheets/theme.css">
+  <link rel="stylesheet" href="../stylesheets/carcard.css">
+  <link rel="stylesheet" href="../stylesheets/register.css">
+</head>
+<body>
+  <!-- Back to top button -->
+  <div class="back-to-top"></div>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky" data-offset="500">
+      <div class="container">
+        <a href="#" class="navbar-brand"><b>Vani</b> <span class="text-primary">Unnati</span></a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/practice">Practice</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/game">Game</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" style="color: rgb(4, 1, 14);" href="/leaderboard">Leaderboard</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+                  <!-- <div class="text-center mb-5">
+                    <h1>Games</h1>
+                    <div class="row justify-content-center mt-4">
+                      <div class="col-md-4">
+                        <div class="card h-100">
+                          <div class="card-body text-center">
+                            <h5 class="card-title">Listening Game</h5>
+                            <p class="card-text">Practice your Hindi pronunciation by listening to audio and selecting the correct option.</p>
+                            <button class="btn btn-primary" onclick="showListeningGame(); document.getElementById('mcq-game').style.display='block';">Start Game</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card h-100">
+                          <div class="card-body text-center">
+                            <h5 class="card-title">Speaking Game</h5>
+                            <p class="card-text">Practice your Hindi speaking skills by recording your pronunciation.</p>
+                            <button class="btn btn-primary" onclick="showSpeakingGame()">Start Game</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+                  <br
+    <center ><h2 style="margin-top: 100px; text-align: center;" >Listening Game</h2></center>              
+  <center><div class="container mt-5">
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        <h3>Learn Hindi Pronunciation</h3>
+        <p class="mb-0">Listen to the audio and select the correct pronunciation for each Hindi word</p>
+      </div>
+      
+      <!-- Audio elements -->
+      <div class="audio-container" style="display: none;">
+        <!-- Question 1 -->
+        <audio id="q1_audio1" src="/audio/naste.mp3"></audio>
+        <audio id="q1_audio2" src="/audio/namasthiyy.mp3"></audio>
+        <audio id="q1_audio3" src="/audio/namaste.mp3"></audio>
+        <audio id="q1_audio4" src="/audio/nimasthe.mp3"></audio>
+        
+        <!-- Question 2 -->
+        <audio id="q2_audio1" src="/audio/kamal.mp3"></audio>
+        <audio id="q2_audio2" src="/audio/o.mp3"></audio>
+        <audio id="q2_audio3" src="/audio/ri.mp3"></audio>
+        <audio id="q2_audio4" src="/audio/u.mp3"></audio>
+        
+        <!-- Question 3 -->
+        <audio id="q3_audio1" src="/audio/a.mp3"></audio>
+        <audio id="q3_audio2" src="/audio/aa.mp3"></audio>
+        <audio id="q3_audio3" src="/audio/am.mp3"></audio>
+        <audio id="q3_audio4" src="/audio/au.mp3"></audio>
+        
+        <!-- Question 4 -->
+        <audio id="q4_audio1" src="/audio/subhprabhat1.mp3"></audio>
+        <audio id="q4_audio2" src="/audio/subhprabhat2.mp3"></audio>
+        <audio id="q4_audio3" src="/audio/subhprabhat3.mp3"></audio>
+        <audio id="q4_audio4" src="/audio/subhprabhat4.mp3"></audio>
+        
+        <!-- Question 5 -->
+        <audio id="q5_audio1" src="/audio/subhratri1.mp3"></audio>
+        <audio id="q5_audio2" src="/audio/subhratri2.mp3"></audio>
+        <audio id="q5_audio3" src="/audio/subhratri3.mp3"></audio>
+        <audio id="q5_audio4" src="/audio/subhratri4.mp3"></audio>
+        
+        <!-- Question 6 -->
+        <audio id="q6_audio1" src="/audio/mainthik1.mp3"></audio>
+        <audio id="q6_audio2" src="/audio/mainthik2.mp3"></audio>
+        <audio id="q6_audio3" src="/audio/mainthik3.mp3"></audio>
+        <audio id="q6_audio4" src="/audio/mainthik4.mp3"></audio>
+        
+        <!-- Question 7 -->
+        <audio id="q7_audio1" src="/audio/kyahal1.mp3"></audio>
+        <audio id="q7_audio2" src="/audio/kyahal2.mp3"></audio>
+        <audio id="q7_audio3" src="/audio/kyahal3.mp3"></audio>
+        <audio id="q7_audio4" src="/audio/kyahal4.mp3"></audio>
+        
+        <!-- Question 8 -->
+        <audio id="q8_audio1" src="/audio/phirmilenge1.mp3"></audio>
+        <audio id="q8_audio2" src="/audio/phirmilenge2.mp3"></audio>
+        <audio id="q8_audio3" src="/audio/phirmilenge3.mp3"></audio>
+        <audio id="q8_audio4" src="/audio/phirmilenge4.mp3"></audio>
+        
+        <!-- Question 9 -->
+        <audio id="q9_audio1" src="/audio/khushraho1.mp3"></audio>
+        <audio id="q9_audio2" src="/audio/khushraho2.mp3"></audio>
+        <audio id="q9_audio3" src="/audio/khushraho3.mp3"></audio>
+        <audio id="q9_audio4" src="/audio/khushraho4.mp3"></audio>
+        
+        <!-- Question 10 -->
+        <audio id="q10_audio1" src="/audio/swagathai1.mp3"></audio>
+        <audio id="q10_audio2" src="/audio/swagathai2.mp3"></audio>
+        <audio id="q10_audio3" src="/audio/swagathai3.mp3"></audio>
+        <audio id="q10_audio4" src="/audio/swagathai4.mp3"></audio>
+      </div>
+      
+      <div class="card-body">
+        <div id="game-container">
+          <div class="progress mb-3">
+            <div id="progress-bar" class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+          </div>
+
+          <div id="question-section" class="mb-4">
+            <h6 style="color: grey;">Question <span id="question-number">1</span>/10</h6>
+            <h4 id="hindi-word" class="display-5 text-center mb-4"></h4>
+            <p class="text-muted text-center">Click the buttons below to hear the pronunciations</p>
+          </div>
+
+          <div id="options-section" class="mb-4">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <button class="btn btn-outline-primary btn-lg btn-block" onclick="playAudio(0)">
+                  <i class="mai-play"></i> 1
+                </button>
+              </div>
+              <div class="col-md-6 mb-3">
+                <button class="btn btn-outline-primary btn-lg btn-block" onclick="playAudio(1)">
+                  <i class="mai-play"></i> 2
+                </button>
+              </div>
+              <div class="col-md-6 mb-3">
+                <button class="btn btn-outline-primary btn-lg btn-block" onclick="playAudio(2)">
+                  <i class="mai-play"></i> 3
+                </button>
+              </div>
+              <div class="col-md-6 mb-3">
+                <button class="btn btn-outline-primary btn-lg btn-block" onclick="playAudio(3)">
+                  <i class="mai-play"></i> 4
+                </button>
+              </div>
+            </div>
+
+            <div class="mt-3" style="width: 240px; ">
+              <select class="form-control form-control-lg" id="answer-select">
+                <option value="">Select your answer...</option>
+                <option value="0">Pronunciation 1</option>
+                <option value="1">Pronunciation 2</option>
+                <option value="2">Pronunciation 3</option>
+                <option value="3">Pronunciation 4</option>
+              </select>
+            </div>
+          </div>
+
+          <button id="next-btn" class="btn btn-success btn-lg btn-block" onclick="nextQuestion()">
+            Submit Answer
+          </button>
+        </div>
+
+        <div id="results-section" style="display: none;" class="text-center">
+          <h3 class="mb-4">Game Complete!</h3>
+          <div class="display-4 mb-4">Score: <span id="final-score">0</span>/10</div>
+          <button class="btn btn-primary btn-lg" onclick="restartGame()">Play Again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</center>
+
+  <footer class="page-footer bg-image mt-5" style="background-image: url(../images/world_pattern.svg);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <p class="mb-0">© 2024 Hindi Pronunciation Game. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  const questions = [
+    { 
+      word: 'नमस्ते', 
+      correctOption: 2, 
+      meaning: 'Hello',
+      audioIds: ['q1_audio1', 'q1_audio2', 'q1_audio3', 'q1_audio4']
+    },
+    { 
+      word: 'धन्यवाद', 
+      correctOption: 0, 
+      meaning: 'Thank you',
+      audioIds: ['q2_audio1', 'q2_audio2', 'q2_audio3', 'q2_audio4']
+    },
+    { 
+      word: 'आप कैसे हैं', 
+      correctOption: 1, 
+      meaning: 'How are you?',
+      audioIds: ['q3_audio1', 'q3_audio2', 'q3_audio3', 'q3_audio4']
+    },
+    { 
+      word: 'शुभ प्रभात', 
+      correctOption: 3, 
+      meaning: 'Good morning',
+      audioIds: ['q4_audio1', 'q4_audio2', 'q4_audio3', 'q4_audio4']
+    },
+    { 
+      word: 'शुभ रात्रि', 
+      correctOption: 2, 
+      meaning: 'Good night',
+      audioIds: ['q5_audio1', 'q5_audio2', 'q5_audio3', 'q5_audio4']
+    },
+    { 
+      word: 'मैं ठीक हूं', 
+      correctOption: 1, 
+      meaning: 'I am fine',
+      audioIds: ['q6_audio1', 'q6_audio2', 'q6_audio3', 'q6_audio4']
+    },
+    { 
+      word: 'क्या हाल है', 
+      correctOption: 0, 
+      meaning: 'How are you?',
+      audioIds: ['q7_audio1', 'q7_audio2', 'q7_audio3', 'q7_audio4']
+    },
+    { 
+      word: 'फिर मिलेंगे', 
+      correctOption: 3, 
+      meaning: 'See you again',
+      audioIds: ['q8_audio1', 'q8_audio2', 'q8_audio3', 'q8_audio4']
+    },
+    { 
+      word: 'खुश रहो', 
+      correctOption: 2, 
+      meaning: 'Be happy',
+      audioIds: ['q9_audio1', 'q9_audio2', 'q9_audio3', 'q9_audio4']
+    },
+    { 
+      word: 'स्वागत है', 
+      correctOption: 1, 
+      meaning: 'Welcome',
+      audioIds: ['q10_audio1', 'q10_audio2', 'q10_audio3', 'q10_audio4']
+    }
+  ];
+
+  let currentQuestion = 0;
+  let score = 0;
+
+  function initGame() {
+    displayQuestion();
+    updateProgressBar();
+  }
+
+  function displayQuestion() {
+    if (currentQuestion < questions.length) {
+      document.getElementById('question-number').textContent = currentQuestion + 1;
+      document.getElementById('hindi-word').textContent = 
+        `${questions[currentQuestion].word} (${questions[currentQuestion].meaning})`;
+      document.getElementById('answer-select').value = '';
+      updateProgressBar();
+    } else {
+      showResults();
+    }
+  }
+
+  function updateProgressBar() {
+    const progress = (currentQuestion / questions.length) * 100;
+    document.getElementById('progress-bar').style.width = `${progress}%`;
+    document.getElementById('progress-bar').setAttribute('aria-valuenow', progress);
+  }
+
+  function playAudio(optionNumber) {
+    const audioId = questions[currentQuestion].audioIds[optionNumber];
+    const audio = document.getElementById(audioId);
+    // Stop all other audio first
+    document.querySelectorAll('audio').forEach(a => {
+      a.pause();
+      a.currentTime = 0;
+    });
+    audio.play();
+  }
+
+  function nextQuestion() {
+    const selectedOption = document.getElementById('answer-select').value;
+    
+    if (!selectedOption) {
+      alert('Please select an answer before continuing');
+      return;
+    }
+
+    if (parseInt(selectedOption) === questions[currentQuestion].correctOption) {
+      score++;
+      showFeedback(true);
+    } else {
+      showFeedback(false);
+    }
+
+    currentQuestion++;
+    displayQuestion();
+  }
+
+  function showFeedback(isCorrect) {
+    const feedbackEl = document.createElement('div');
+    feedbackEl.className = `alert alert-${isCorrect ? 'success' : 'danger'} alert-dismissible fade show`;
+    feedbackEl.innerHTML = `
+      ${isCorrect ? 'Correct!' : 'Incorrect!'} 
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    `;
+    document.querySelector('.card-body').insertBefore(feedbackEl, document.getElementById('game-container'));
+    
+    // Auto dismiss after 2 seconds
+    setTimeout(() => {
+      feedbackEl.remove();
+    }, 2000);
+  }
+
+  function showResults() {
+    document.getElementById('game-container').style.display = 'none';
+    document.getElementById('results-section').style.display = 'block';
+    document.getElementById('final-score').textContent = score;
+  }
+
+  function restartGame() {
+    currentQuestion = 0;
+    score = 0;
+    document.getElementById('game-container').style.display = 'block';
+    document.getElementById('results-section').style.display = 'none';
+    displayQuestion();
+  }
+
+  // Initialize the game when page loads
+  initGame();
+  </script>
+
+  <script src="../javascripts/jquery-3.5.1.min.js"></script>
+  <script src="../javascripts/bootstrap.bundle.min.js"></script>
+  <script src="../vendor/wow/wow.min.js"></script>
+  <script src="../javascripts/theme.js"></script>
+</body>
+</html>
